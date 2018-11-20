@@ -5,7 +5,8 @@ from .models import Ride
 class RideSerializer(serializers.Serializer):
     origin = serializers.CharField(max_length=255)
     destination = serializers.CharField(max_length=255)
-    date = serializers.DateField()
+    date_created = serializers.DateTimeField()
+    date_modified = serializers.DateTimeField()
     passengers = serializers.IntegerField()
     driver_id = serializers.IntegerField()
 
